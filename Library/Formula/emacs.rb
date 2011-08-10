@@ -1,8 +1,8 @@
 require 'formula'
 
 class Emacs < Formula
-  url 'http://ftp.gnu.org/pub/gnu/emacs/emacs-23.3.tar.bz2'
-  md5 'a673c163b4714362b94ff6096e4d784a'
+  url 'http://ftp.gnu.org/pub/gnu/emacs/emacs-23.3a.tar.bz2'
+  md5 'f2cf8dc6f28f8ae59bc695b4ddda339c'
   homepage 'http://www.gnu.org/software/emacs/'
 
   # Stripping on Xcode 4 causes malformed object errors
@@ -29,8 +29,6 @@ class Emacs < Formula
     # Fix for building with Xcode 4; harmless on Xcode 3.x.
     unless ARGV.build_head?
       p << "http://repo.or.cz/w/emacs.git/commitdiff_plain/c8bba48c5889c4773c62a10f7c3d4383881f11c1"
-      p << "https://raw.github.com/gist/1098107"
-      p << "https://raw.github.com/gist/1102744"
     end
 
     if ARGV.include? "--cocoa"
